@@ -80,16 +80,4 @@ public class GifController {
         return frames;
     }
 
-    private static long[] getTime(LocalTime start, LocalTime stop) {
-
-        Duration duration = Duration.between(stop, start);
-
-        long seconds = duration.getSeconds();
-
-        long hours = seconds / (60*60);
-        long minutes = ((seconds % (60*60)) / 60);
-        long secs = (seconds % 60);
-
-        return new long[]{hours, minutes, secs};
-    }
 }
